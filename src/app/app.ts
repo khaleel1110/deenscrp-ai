@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AfterViewInit, Component, signal } from '@angular/core';
+import AOS from 'aos';
+import { Layout } from './core/layout/layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  template: `<app-layout></app-layout>`,
+  styleUrl: './app.scss',
+  imports: [Layout],
 })
-export class App {
+export class App implements AfterViewInit {
   protected readonly title = signal('deenscrp-ai');
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: 'ease-in-out',
+      mirror: true
+    });
+
+    setTimeout(() => {
+      AOS.refreshHard();
+    }, 300);
+  }
 }

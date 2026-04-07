@@ -1,0 +1,29 @@
+.hero-section {
+  height: 600px;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    height: 760px;
+  }
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+}
+.badge {
+  display: block;
+}
+.custom-corner {
+  height: 40px;
+  width: 40px;
+  border-top-left-radius: 10px;
+}.border-secondary-body {
+border-block-color: #c5c5c5;
+   border-color: #c5c5c5;
+}
+.secondary-body-custom {
+background-color: #ececec;
+}

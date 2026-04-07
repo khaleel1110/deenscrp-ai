@@ -1,0 +1,528 @@
+<main class="page-wrapper bg-primary">
+
+  <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+
+
+
+
+  <!-- Background Image -->
+  <section class="hero-section position-relative mb-5">
+
+    <!-- Background Image -->
+    <img src="/hero-1.png"
+         class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+         alt="Banner">
+
+    <!-- Optional overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-10"></div>
+
+    <!-- Content - Center on mobile, Bottom on desktop -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column px-3 px-lg-4"
+         [style.justifyContent]="isMobile ? 'center' : 'flex-end'"
+         [style.paddingBottom]="isMobile ? '0' : '3rem'">
+
+      <div class="w-100 text-center text-dark mx-auto" style="max-width: 800px;">
+
+        <h2 class="h2 fw-bold mb-2 mb-md-3"
+            [style.fontSize]="isMobile ? '1.5rem' : '2rem'">
+          YOU CREATE THE BUSINESS, WE PUT IT IN ORDER
+        </h2>
+
+        <p class="fs-6 fs-md-5 fs-lg-4 mb-3"
+           [style.fontSize]="isMobile ? '0.9rem' : '1rem'">
+          We are UK-led AI and technology delivery firm connecting organisations with vetted global experts to execute high-impact digital, data, and AI projects—reliably, securely, and at speed.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Breadcrumb + Services grid -->
+  <section id="services" class=" container  py-3 mb-md-3 mb-lg-4 mb-xxl-5">
+
+    <div class="text-center text-light  pb-1 pb-sm-2 pb-md-4 pt-lg-2 mt-0  mt-lg-0">
+      <a [href]="'mailto:'+env.emailAddress"  class="btn btn-secondary text-light" >Get in Touch</a>
+    </div>
+    <!-- Page title -->
+    <h1 class="display-5 text-center">Our services</h1>
+    <!-- Services grid -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-3 pb-md-4 pb-xl-5">
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-right' : null" class="col">
+        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">AI & Data Solutions </h3>
+            <p class="card-text mt-3 pt-4">We design and deploy AI, machine learning, and data solutions that automate processes, improve decision-making, and deliver measurable business value through secure, scalable, enterprise-ready architectures.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-down' : null" class="col">
+        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">Digital Transformation </h3>
+            <p class="card-text mt-3 pt-4">We help organisations modernise systems and processes through technology-led transformation, improving efficiency, agility, and service delivery aligned with strategic business objectives.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-left' : null" class="col">
+        <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">Quality Assurance & Testing </h3>
+            <p class="card-text mt-3 pt-4">We deliver comprehensive testing services covering functionality, performance, security, and compliance, ensuring digital products meet enterprise standards before deployment.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-right' : null" class="col">
+        <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">Managed Global Teams </h3>
+            <p class="card-text mt-3 pt-4">We build secure, scalable software across web, mobile, and cloud platforms, delivering robust systems designed for performance, integration, and long-term operational reliability.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-up' : null" class="col">
+        <a class="card card-hover-secondary rounded-1   bg-primary border-1 border-white h-100  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">Software Engineering </h3>
+            <p class="card-text mt-3 pt-4">We build secure, scalable software across web, mobile, and cloud platforms, delivering robust systems designed for performance, integration, and long-term operational reliability.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-left' : null" class="col">
+        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
+          <div class="card-body pb-0">
+            <h3 class="h4 card-title mt-0">Consulting & Delivery Oversight </h3>
+            <p class="card-text mt-3 pt-4">We provide strategic consulting and delivery governance, supporting project planning, execution, risk management, and performance monitoring to ensure successful, outcome-focused delivery.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="  mt-md-4">
+      <div class=" col-lg-8 col-md-12 offset-xxl-1    mb-4 mb-md-0">
+        <div class="text-center text-md-start pe-md-4 pe-xl-5 pe-xxl-0">
+          <p [attr.data-aos]="!isMobile ? 'fade-right' : null" class="display-6 text-secondary mb-sm-4">Why Deenscorp.ai Powers End-to-End Technology Delivery Across Global Teams</p>
+          <p class="   ">delivers enterprise-led technology projects by combining global expertise, structured governance, and accountable delivery across diverse markets and ecosystems.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div [attr.data-aos]="!isMobile ? 'fade-down' : null"
+         [attr.data-aos-easing]="!isMobile ? 'linear' : null"
+         [attr.data-aos-duration]="!isMobile ? '1500' : null" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
+
+
+
+
+      <!-- Item -->
+      <div class="col">
+        <a class="card  bg-primary border-1 border-white rounded-0 pb-5 h-100 text-decoration-none" >
+          <div class="card-body pb-0">
+
+            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
+            </svg>
+
+            <h6 class=" mt-2  py-3 ">Structured Engagements</h6>
+            <p class="card-text">Clear discovery, defined scope, coordinated team assembly, delivery oversight, and reporting ensure predictable outcomes.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div class="col">
+        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
+          <div class="card-body pb-0">
+
+            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
+            </svg>
+
+            <h6 class=" mt-2  py-3 ">Secure & Compliant
+              Delivery</h6>
+            <p class="card-text">All engagements follow GDPR-aligned processes, secure delivery practices,
+              and contract-led frameworks..</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div class="col">
+        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
+          <div class="card-body pb-0">
+
+            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
+            </svg>
+
+            <h6 class=" mt-2  py-3 ">Partner-Based Model</h6>
+            <p class="card-text">We work with vetted global experts, academic partners, and innovation ecosystems under a structured delivery model.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div class="col">
+        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
+          <div class="card-body pb-0">
+
+            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
+            </svg>
+
+            <h6 class=" mt-2  py-3 ">Scalable Global Reach</h6>
+            <p class="card-text">Multi-region delivery capability supported by managed teams and local partners.</p>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+    <section class="container    ">
+
+      <div class="mt-md-4 text-center mb-4">
+        <p class="display-5 text-dark mb-sm-4">DeenscorpAI Work For</p>
+
+        <p class="fs-6 fs-md-5 fs-lg-4 mb-3">
+          Rather than maintaining a fixed workforce, we work with trusted experts, partners, and institutions <br>
+          assembled per project under Deenscorp.ai’s governance, QA, and accountability framework.
+        </p>
+      </div>
+
+      <!--  GRID -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-2 py-4">
+        @for (item of workCategories ; track item) {
+          <div    [attr.data-aos]="!isMobile ? item.aos : null"
+                  [attr.data-aos-delay]="!isMobile ? item.delay : null" class="col">
+            <div class="badge bg-secondary rounded-1 text-light fs-6 px-4 py-2 w-100 text-center">
+              {{ item.title }}
+            </div>
+          </div>
+        }
+
+
+
+
+      </div>
+
+    </section>
+
+  </section>
+  <!-- Breadcrumb + delivery model grid -->
+  <section  id="delivery-model" class="container  mb-md-3 mb-lg-4 mb-xxl-5">
+
+    <!-- Page title -->
+    <h1 class="display-5 text-center">Delivery Model</h1>
+    <p class="fs-6 fs-md-5 text-center fs-lg-4 mb-3">
+      Each engagement is contract-led, securely delivered, and governed through defined milestones and reporting.
+
+    </p>
+
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
+
+
+
+
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-down-right' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">1</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Discovery & Alignment</p>
+            <p class="card-text">Clarify project objectives align stakeholders and define success criteria before delivery begins.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'zoom-out-down' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">2</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Scope Definition & Planning</p>
+            <p class="card-text">Define project scope deliverables timelines governance and milestones to ensure controlled execution.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-down-left' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">3</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Team Assemblyt</p>
+            <p class="card-text">Assemble vetted experts and partners aligned to project requirements delivery objectives and timelines.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-up-right' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">4</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Execution & Delivery</p>
+            <p class="card-text">Deliver work against agreed milestones with structured coordination quality control and active oversight.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'zoom-out-up' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">5</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Review & Optimisation</p>
+            <p class="card-text">Review deliverables refine outputs and ensure quality performance and stakeholder alignment.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Item -->
+      <div [attr.data-aos]="!isMobile ? 'fade-up-left' : null" class="col">
+        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="bg-dark custom-corner text-center text-white h4 ">6</div>
+          </div>
+
+          <div class="mx-4 mt-3  pb-3">
+
+
+            <p class=" h6 mt-0  py-1 pb-2 ">Reporting & Close-Out</p>
+            <p class="card-text">We provide structured reporting knowledge transfer and formal close-out aligned with contractual obligations.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+
+    </div>
+    <p class="card-text mt-0 text-center">Our model allows flexibility, scalability, and consistent delivery quality across regions and sectors.</p>
+
+  </section>
+
+
+
+
+  <section id="eco-system" class="container">
+    <div class="mt-md-4 text-center mb-4">
+      <p class="display-5 text-dark mb-sm-4">Global Ecosystem & Public Interest</p>
+
+      <p class="fs-6 fs-md-5 fs-lg-4 mb-3">
+        We partner with universities, research institutions, and innovation hubs to deliver high-impact initiatives <br> that advance skills,
+        technology adoption, and inclusive innovation.
+      </p>
+    </div>
+    <div [attr.data-aos]="!isMobile ? 'zoom-out-down' : null"  class=" secondary-body-custom bg-opcity-50  rounded-0 border-dark py-5 px-4 p-sm-5">
+
+
+      <div class="  row row-cols-1 row-cols-sm-3 pt-2 pt-sm-0 pt-lg-3">
+        <div class="col  ">
+          <div style="max-width: 336px;">
+            <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5487 19.6336C1.36793 17.7 0.74539 15.4773 0.750026 13.2116C0.750026 6.32854 6.38681 0.75 13.3392 0.75C20.2915 0.75 25.9283 6.32854 25.9283 13.2116C25.9329 15.4773 25.3104 17.7 24.1296 19.6336" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18.0601 27.5017L17.8555 28.5198C17.6352 29.6324 17.5235 30.1879 17.2732 30.6285C16.8877 31.3076 16.2634 31.8191 15.5218 32.0636C15.0418 32.2226 14.4722 32.2226 13.3391 32.2226C12.2061 32.2226 11.6365 32.2226 11.1565 32.0652C10.4146 31.8203 9.79029 31.3082 9.40504 30.6285C9.15483 30.1879 9.0431 29.6324 8.82279 28.5198L8.61822 27.5017M6.07364 24.5086C5.92886 24.0743 5.85648 23.8556 5.86435 23.6793C5.87325 23.4971 5.93476 23.3213 6.04144 23.1733C6.14812 23.0253 6.29541 22.9114 6.46548 22.8453C6.62914 22.7808 6.85889 22.7808 7.31524 22.7808H19.363C19.821 22.7808 20.0492 22.7808 20.2128 22.8437C20.3831 22.9099 20.5306 23.0241 20.6373 23.1724C20.744 23.3207 20.8053 23.4968 20.8139 23.6793C20.8218 23.8556 20.7494 24.0727 20.6047 24.5086C20.3371 25.3127 20.2034 25.7156 19.9972 26.0413C19.566 26.7221 18.8902 27.2116 18.1089 27.4088C17.7343 27.5017 17.3126 27.5017 16.4675 27.5017H10.2107C9.3657 27.5017 8.94239 27.5017 8.56944 27.4073C7.78838 27.2104 7.11254 26.7215 6.68107 26.0413C6.47492 25.7156 6.34116 25.3127 6.07364 24.5086Z" stroke="black" stroke-width="1.5"/>
+              <path d="M7.43799 12.9459L10.9787 16.4865V22.7811M19.2403 12.9459L15.6996 16.4865V22.7811M7.43799 14.1261C7.75101 14.1261 8.05121 14.0017 8.27254 13.7804C8.49388 13.5591 8.61823 13.2589 8.61823 12.9459C8.61823 12.6328 8.49388 12.3326 8.27254 12.1113C8.05121 11.89 7.75101 11.7656 7.43799 11.7656C7.12498 11.7656 6.82478 11.89 6.60344 12.1113C6.38211 12.3326 6.25776 12.6328 6.25776 12.9459C6.25776 13.2589 6.38211 13.5591 6.60344 13.7804C6.82478 14.0017 7.12498 14.1261 7.43799 14.1261ZM19.2403 14.1261C18.9273 14.1261 18.6271 14.0017 18.4058 13.7804C18.1844 13.5591 18.0601 13.2589 18.0601 12.9459C18.0601 12.6328 18.1844 12.3326 18.4058 12.1113C18.6271 11.89 18.9273 11.7656 19.2403 11.7656C19.5533 11.7656 19.8535 11.89 20.0749 12.1113C20.2962 12.3326 20.4205 12.6328 20.4205 12.9459C20.4205 13.2589 20.2962 13.5591 20.0749 13.7804C19.8535 14.0017 19.5533 14.1261 19.2403 14.1261Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+
+            <p class="my-3 py-3">Applied research, innovation, and pilot project delivery</p>
+          </div>
+        </div>
+        <div class="col mx-lg-n1 ">
+          <div class="mx-sm-auto" style="max-width: 336px;">
+            <svg width="27" height="33" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.8637 17.3755V23.9323" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5.96925 1.35723C3.75041 0.934966 2.641 0.723835 1.69419 1.53426C0.75 2.34338 0.75 3.65868 0.75 6.28929V15.743C0.75 18.148 0.75 19.3505 1.35716 20.1019C1.96302 20.852 3.29799 21.1065 5.97056 21.6153C8.3507 22.069 10.2089 22.7903 11.5544 23.5168C12.8789 24.2314 13.5398 24.5881 13.8637 24.5881C14.1876 24.5881 14.8498 24.2314 16.1717 23.5168C17.5185 22.7916 19.3767 22.069 21.7581 21.6153C24.4281 21.1065 25.7644 20.852 26.3702 20.1019C26.9774 19.3505 26.9774 18.148 26.9774 15.743V6.28929C26.9774 3.65868 26.9774 2.34338 26.0332 1.53426C25.0864 0.723835 23.977 0.934966 21.7581 1.35723" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.8802 11.4745C12.8802 11.2136 12.7765 10.9635 12.5921 10.779C12.4077 10.5946 12.1575 10.491 11.8966 10.491C11.6358 10.491 11.3856 10.5946 11.2012 10.779C11.0167 10.9635 10.9131 11.2136 10.9131 11.4745H12.8802ZM10.9131 14.0972C10.9131 14.3581 11.0167 14.6082 11.2012 14.7927C11.3856 14.9771 11.6358 15.0808 11.8966 15.0808C12.1575 15.0808 12.4077 14.9771 12.5921 14.7927C12.7765 14.6082 12.8802 14.3581 12.8802 14.0972H10.9131ZM16.8143 11.4745C16.8143 11.2136 16.7107 10.9635 16.5262 10.779C16.3418 10.5946 16.0916 10.491 15.8307 10.491C15.5699 10.491 15.3197 10.5946 15.1353 10.779C14.9508 10.9635 14.8472 11.2136 14.8472 11.4745H16.8143ZM14.8472 14.0972C14.8472 14.3581 14.9508 14.6082 15.1353 14.7927C15.3197 14.9771 15.5699 15.0808 15.8307 15.0808C16.0916 15.0808 16.3418 14.9771 16.5262 14.7927C16.7107 14.6082 16.8143 14.3581 16.8143 14.0972H14.8472ZM12.8802 0.983527C12.8802 0.72268 12.7765 0.472515 12.5921 0.288068C12.4077 0.103621 12.1575 0 11.8966 0C11.6358 0 11.3856 0.103621 11.2012 0.288068C11.0167 0.472515 10.9131 0.72268 10.9131 0.983527H12.8802ZM10.9131 3.60627C10.9131 3.86711 11.0167 4.11728 11.2012 4.30173C11.3856 4.48617 11.6358 4.58979 11.8966 4.58979C12.1575 4.58979 12.4077 4.48617 12.5921 4.30173C12.7765 4.11728 12.8802 3.86711 12.8802 3.60627H10.9131ZM16.8143 0.983527C16.8143 0.72268 16.7107 0.472515 16.5262 0.288068C16.3418 0.103621 16.0916 0 15.8307 0C15.5699 0 15.3197 0.103621 15.1353 0.288068C14.9508 0.472515 14.8472 0.72268 14.8472 0.983527H16.8143ZM14.8472 3.60627C14.8472 3.86711 14.9508 4.11728 15.1353 4.30173C15.3197 4.48617 15.5699 4.58979 15.8307 4.58979C16.0916 4.58979 16.3418 4.48617 16.5262 4.30173C16.7107 4.11728 16.8143 3.86711 16.8143 3.60627H14.8472ZM9.92959 6.55685C10.1904 6.55685 10.4406 6.45323 10.625 6.26878C10.8095 6.08433 10.9131 5.83417 10.9131 5.57332C10.9131 5.31247 10.8095 5.06231 10.625 4.87786C10.4406 4.69341 10.1904 4.58979 9.92959 4.58979V6.55685ZM7.30685 4.58979C7.046 4.58979 6.79583 4.69341 6.61139 4.87786C6.42694 5.06231 6.32332 5.31247 6.32332 5.57332C6.32332 5.83417 6.42694 6.08433 6.61139 6.26878C6.79583 6.45323 7.046 6.55685 7.30685 6.55685V4.58979ZM9.92959 10.491C10.1904 10.491 10.4406 10.3873 10.625 10.2029C10.8095 10.0184 10.9131 9.76828 10.9131 9.50743C10.9131 9.24658 10.8095 8.99642 10.625 8.81197C10.4406 8.62752 10.1904 8.5239 9.92959 8.5239V10.491ZM7.30685 8.5239C7.046 8.5239 6.79583 8.62752 6.61139 8.81197C6.42694 8.99642 6.32332 9.24658 6.32332 9.50743C6.32332 9.76828 6.42694 10.0184 6.61139 10.2029C6.79583 10.3873 7.046 10.491 7.30685 10.491V8.5239ZM20.4205 6.55685C20.6814 6.55685 20.9316 6.45323 21.116 6.26878C21.3004 6.08433 21.4041 5.83417 21.4041 5.57332C21.4041 5.31247 21.3004 5.06231 21.116 4.87786C20.9316 4.69341 20.6814 4.58979 20.4205 4.58979V6.55685ZM17.7978 4.58979C17.537 4.58979 17.2868 4.69341 17.1023 4.87786C16.9179 5.06231 16.8143 5.31247 16.8143 5.57332C16.8143 5.83417 16.9179 6.08433 17.1023 6.26878C17.2868 6.45323 17.537 6.55685 17.7978 6.55685V4.58979ZM20.4205 10.491C20.6814 10.491 20.9316 10.3873 21.116 10.2029C21.3004 10.0184 21.4041 9.76828 21.4041 9.50743C21.4041 9.24658 21.3004 8.99642 21.116 8.81197C20.9316 8.62752 20.6814 8.5239 20.4205 8.5239V10.491ZM17.7978 8.5239C17.537 8.5239 17.2868 8.62752 17.1023 8.81197C16.9179 8.99642 16.8143 9.24658 16.8143 9.50743C16.8143 9.76828 16.9179 10.0184 17.1023 10.2029C17.2868 10.3873 17.537 10.491 17.7978 10.491V8.5239ZM12.5523 4.58979H15.1751V2.62274H12.5523V4.58979ZM16.8143 6.22901V8.85175H18.7813V6.22901H16.8143ZM15.1751 10.491H12.5523V12.458H15.1751V10.491ZM10.9131 8.85175V6.22901H8.94606V8.85175H10.9131ZM12.5523 10.491C11.9058 10.491 11.5203 10.4883 11.2449 10.4516C11.1641 10.4433 11.0847 10.4244 11.0088 10.3952L9.61879 11.7853C10.024 12.1918 10.5158 12.3387 10.9826 12.4016C11.4206 12.4606 11.9622 12.458 12.5523 12.458V10.491ZM8.94606 8.85175C8.94606 9.44186 8.94344 9.98346 9.00245 10.4215C9.06539 10.8883 9.21227 11.3801 9.61879 11.7853L11.0088 10.3952L11.0075 10.3913L11.001 10.3782C10.9759 10.3074 10.9596 10.2339 10.9525 10.1592C10.9157 9.88379 10.9131 9.49825 10.9131 8.85175H8.94606ZM16.8143 8.85175C16.8143 9.49825 16.8117 9.88379 16.7749 10.1592C16.7667 10.24 16.7477 10.3194 16.7185 10.3952L18.1086 11.7853C18.5151 11.3801 18.662 10.8883 18.7249 10.4215C18.784 9.98346 18.7813 9.44186 18.7813 8.85175H16.8143ZM15.1751 12.458C15.7652 12.458 16.3068 12.4606 16.7448 12.4016C17.2116 12.3387 17.7034 12.1918 18.1086 11.7853L16.7185 10.3952L16.7146 10.3965L16.7015 10.4031C16.6308 10.4282 16.5572 10.4445 16.4825 10.4516C16.2071 10.4883 15.8216 10.491 15.1751 10.491V12.458ZM15.1751 4.58979C15.8216 4.58979 16.2071 4.59242 16.4825 4.62914C16.5619 4.63732 16.64 4.65584 16.7146 4.68421L16.7185 4.68552L18.1086 3.29547C17.7034 2.88895 17.2116 2.74207 16.7448 2.67913C16.3068 2.62012 15.7652 2.62274 15.1751 2.62274V4.58979ZM18.7813 6.22901C18.7813 5.63889 18.784 5.09729 18.7249 4.6593C18.662 4.19245 18.5151 3.70069 18.1086 3.29547L16.7185 4.68552L16.7199 4.68946L16.7264 4.70257C16.7382 4.73142 16.7579 4.79437 16.7749 4.92157C16.8117 5.19696 16.8143 5.5825 16.8143 6.22901H18.7813ZM12.5523 2.62274C11.9622 2.62274 11.4206 2.62012 10.9826 2.67913C10.5158 2.74207 10.024 2.88895 9.61879 3.29547L11.0088 4.68552L11.0128 4.68421L11.0259 4.67766C11.0966 4.65259 11.1702 4.6363 11.2449 4.62914C11.5203 4.59242 11.9058 4.58979 12.5523 4.58979V2.62274ZM10.9131 6.22901C10.9131 5.5825 10.9157 5.19696 10.9525 4.92157C10.9607 4.84074 10.9797 4.76136 11.0088 4.68552L9.61879 3.29547C9.21227 3.70069 9.06539 4.19245 9.00245 4.6593C8.94344 5.09729 8.94606 5.63889 8.94606 6.22901H10.9131ZM10.9131 11.4745V14.0972H12.8802V11.4745H10.9131ZM14.8472 11.4745V14.0972H16.8143V11.4745H14.8472ZM10.9131 0.983527V3.60627H12.8802V0.983527H10.9131ZM14.8472 0.983527V3.60627H16.8143V0.983527H14.8472ZM9.92959 4.58979H7.30685V6.55685H9.92959V4.58979ZM9.92959 8.5239H7.30685V10.491H9.92959V8.5239ZM20.4205 4.58979H17.7978V6.55685H20.4205V4.58979ZM20.4205 8.5239H17.7978V10.491H20.4205V8.5239Z" fill="black"/>
+            </svg>
+
+            <p class="my-3 py-3">Digital skills development and workforce capacity building</p>
+          </div>
+        </div>
+        <div class="col mx-lg-n5 ">
+          <div class="ms-sm-auto" style="max-width: 336px;">
+            <svg width="27" height="33" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.2322 4.321L7.35416 5.719M5.2322 19.679L7.35416 18.28M21.0324 4.321L18.9105 5.719M21.0324 19.679L18.9105 18.28M0.75055 3C0.75055 3.29547 0.814603 3.58806 0.939052 3.86104C1.0635 4.13402 1.24591 4.38206 1.47586 4.59099C1.70581 4.79992 1.9788 4.96566 2.27924 5.07873C2.57969 5.1918 2.90171 5.25 3.2269 5.25C3.5521 5.25 3.87412 5.1918 4.17456 5.07873C4.47501 4.96566 4.748 4.79992 4.97795 4.59099C5.2079 4.38206 5.39031 4.13402 5.51476 3.86104C5.63921 3.58806 5.70326 3.29547 5.70326 3C5.70326 2.40326 5.44236 1.83097 4.97795 1.40901C4.51354 0.987053 3.88367 0.75 3.2269 0.75C2.57013 0.75 1.94026 0.987053 1.47586 1.40901C1.01145 1.83097 0.75055 2.40326 0.75055 3ZM0.75055 21C0.743602 21.2994 0.802504 21.597 0.923804 21.8755C1.0451 22.1539 1.22636 22.4076 1.45695 22.6216C1.68753 22.8355 1.96281 23.0055 2.26665 23.1216C2.57048 23.2377 2.89676 23.2974 3.22635 23.2974C3.55595 23.2974 3.88222 23.2377 4.18606 23.1216C4.48989 23.0055 4.76517 22.8355 4.99576 22.6216C5.22635 22.4076 5.40761 22.1539 5.5289 21.8755C5.6502 21.597 5.70911 21.2994 5.70216 21C5.6885 20.4116 5.42166 19.8515 4.95885 19.4398C4.49603 19.028 3.87408 18.7974 3.22635 18.7974C2.57863 18.7974 1.95668 19.028 1.49386 19.4398C1.03105 19.8515 0.764205 20.4116 0.75055 21ZM20.5614 3C20.5614 3.59674 20.8223 4.16903 21.2867 4.59099C21.7511 5.01295 22.381 5.25 23.0377 5.25C23.6945 5.25 24.3244 5.01295 24.7888 4.59099C25.2532 4.16903 25.5141 3.59674 25.5141 3C25.5141 2.40326 25.2532 1.83097 24.7888 1.40901C24.3244 0.987053 23.6945 0.75 23.0377 0.75C22.381 0.75 21.7511 0.987053 21.2867 1.40901C20.8223 1.83097 20.5614 2.40326 20.5614 3ZM20.5614 21C20.5614 21.5967 20.8223 22.169 21.2867 22.591C21.7511 23.0129 22.381 23.25 23.0377 23.25C23.6945 23.25 24.3244 23.0129 24.7888 22.591C25.2532 22.169 25.5141 21.5967 25.5141 21C25.5141 20.4033 25.2532 19.831 24.7888 19.409C24.3244 18.9871 23.6945 18.75 23.0377 18.75C22.381 18.75 21.7511 18.9871 21.2867 19.409C20.8223 19.831 20.5614 20.4033 20.5614 21ZM10.2432 7.875C10.2432 8.57119 10.5476 9.23887 11.0894 9.73116C11.6312 10.2234 12.3661 10.5 13.1323 10.5C13.8986 10.5 14.6334 10.2234 15.1752 9.73116C15.717 9.23887 16.0214 8.57119 16.0214 7.875C16.0214 7.17881 15.717 6.51113 15.1752 6.01884C14.6334 5.52656 13.8986 5.25 13.1323 5.25C12.3661 5.25 11.6312 5.52656 11.0894 6.01884C10.5476 6.51113 10.2432 7.17881 10.2432 7.875ZM8.17961 15.75C8.17961 14.5565 8.70142 13.4119 9.63023 12.568C10.559 11.7241 11.8188 11.25 13.1323 11.25C14.4459 11.25 15.7056 11.7241 16.6344 12.568C17.5632 13.4119 18.085 14.5565 18.085 15.75H8.17961Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+
+            <p class="my-3 py-3">Talent sourcing, upskilling, and expert network mobilisation</p>
+          </div>
+        </div>
+        <div class="col mx-lg-n3  ">
+          <div class="mx-sm-auto" style="max-width: 336px;">
+            <svg width="33" height="37" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M36.5865 8.58793L32.8606 1.13179C32.7406 0.891556 32.5745 0.677305 32.3717 0.50127C32.169 0.325235 31.9335 0.190863 31.6788 0.105826C31.4241 0.0207888 31.1551 -0.0132473 30.8873 0.00565998C30.6194 0.0245673 30.3579 0.0960478 30.1177 0.216021L26.3845 2.08261L18.6246 0.0290701C18.478 -0.00890313 18.3242 -0.00890313 18.1776 0.0290701L10.4177 2.08261L6.68599 0.216021C6.44569 0.0958206 6.18405 0.0241589 5.91603 0.00513291C5.64802 -0.0138931 5.37888 0.0200898 5.12401 0.105138C4.86913 0.190187 4.63352 0.324633 4.43064 0.500793C4.22775 0.676952 4.06158 0.89137 3.94161 1.13179L0.21573 8.58793C-0.0266709 9.07292 -0.0665246 9.63433 0.104933 10.1487C0.276391 10.6631 0.645121 11.0883 1.13004 11.3308L5.09545 13.3143L13.2176 19.1156C13.3056 19.1791 13.4047 19.2256 13.5097 19.2529L22.8573 21.5898C22.9284 21.6076 23.0015 21.6165 23.0749 21.6161C23.3072 21.6159 23.53 21.5234 23.6942 21.359L31.7725 13.2807L35.6722 11.3308C36.1571 11.0883 36.5258 10.6631 36.6973 10.1487C36.8687 9.63433 36.8289 9.07292 36.5865 8.58793ZM28.8455 13.7232L23.6168 9.53437C23.4481 9.3994 23.2356 9.33147 23.0199 9.3436C22.8043 9.35573 22.6007 9.44707 22.4483 9.60009C19.7244 12.3445 16.6791 11.9983 14.738 10.7569C14.6999 10.7333 14.6676 10.7013 14.6438 10.6633C14.62 10.6253 14.6053 10.5824 14.6007 10.5378C14.5956 10.4969 14.5996 10.4553 14.6124 10.4162C14.6253 10.377 14.6468 10.3412 14.6752 10.3114L21.0929 4.08941H26.0384L30.1878 12.3883L28.8455 13.7232ZM1.76684 9.59425C1.74269 9.52103 1.74846 9.44122 1.78291 9.37224L5.51024 1.91465C5.53474 1.86603 5.57234 1.82523 5.61879 1.79684C5.66524 1.76845 5.7187 1.75361 5.77314 1.75399C5.81826 1.75403 5.86275 1.76453 5.90313 1.78466L9.14703 3.40587L5.15679 11.3922L1.9129 9.77098C1.87789 9.75289 1.8469 9.72791 1.8218 9.69754C1.7967 9.66717 1.77801 9.63203 1.76684 9.59425ZM22.8061 19.7699L14.1012 17.5937L6.667 12.2831L10.9289 3.76079L18.4011 1.7832L20.5627 2.35573C20.3974 2.38772 20.2451 2.46744 20.1246 2.58504L13.4498 9.06261C13.2331 9.2792 13.0678 9.54172 12.9662 9.83077C12.8646 10.1198 12.8292 10.428 12.8627 10.7326C12.8963 11.0371 12.9978 11.3303 13.1598 11.5903C13.3219 11.8503 13.5403 12.0707 13.7989 12.2349C16.7521 14.122 20.3349 13.7671 23.1172 11.3747L27.6026 14.9706L22.8061 19.7699ZM35.0354 9.59425C35.0234 9.6307 35.0043 9.66442 34.9792 9.6935C34.9541 9.72257 34.9236 9.74641 34.8893 9.76367L31.6454 11.3922L27.6552 3.40587L30.8991 1.78466C30.9334 1.76741 30.9709 1.75711 31.0092 1.75435C31.0476 1.75159 31.0861 1.75643 31.1225 1.76859C31.159 1.78061 31.1927 1.7997 31.2218 1.82476C31.2509 1.84982 31.2747 1.88037 31.292 1.91465L35.0193 9.37224C35.0538 9.44122 35.0595 9.52103 35.0354 9.59425ZM18.6772 24.4569C18.6209 24.6823 18.4775 24.8761 18.2784 24.9958C18.0793 25.1155 17.8408 25.1512 17.6153 25.0951L11.5204 23.5718C11.4153 23.5448 11.3162 23.4982 11.2283 23.4345L7.37683 20.6872C7.18761 20.5516 7.05999 20.3464 7.02205 20.1167C6.98412 19.8871 7.03897 19.6517 7.17455 19.4625C7.31012 19.2733 7.51532 19.1456 7.74499 19.1077C7.97466 19.0698 8.21 19.1246 8.39922 19.2602L12.1076 21.9082L18.0389 23.3907C18.1508 23.4186 18.2562 23.4684 18.3488 23.5372C18.4414 23.606 18.5196 23.6924 18.5788 23.7915C18.6379 23.8906 18.6769 24.0003 18.6936 24.1145C18.7102 24.2287 18.7041 24.345 18.6757 24.4569H18.6772Z" fill="black"/>
+            </svg>
+
+
+            <p class="my-3 py-3">Industry–academia collaboration and knowledge transfer</p>
+          </div>
+        </div>
+        <div class="col  ">
+          <div class="ms-sm-auto" style="max-width: 336px;">
+            <svg width="27" height="33" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.1137 0C5.90116 0 0 5.90116 0 13.1137C0 20.3262 5.90116 26.2274 13.1137 26.2274C20.3262 26.2274 26.2274 20.3262 26.2274 13.1137C26.2274 5.90116 20.3262 0 13.1137 0ZM21.6376 8.68782C22.2933 8.68782 22.785 9.17959 23.4407 9.17959C22.949 9.83527 20.818 9.83527 20.1623 9.01567C20.6541 8.85174 20.9819 8.68782 21.6376 8.68782ZM1.63921 13.1137C1.63921 12.458 1.63921 11.8023 1.80313 10.9827C1.96705 10.9827 2.13098 11.1466 2.2949 11.1466C2.2949 11.1466 2.45882 11.3106 2.45882 11.4745C2.45882 11.9662 2.95058 12.2941 3.27842 12.2941C4.58979 12.458 5.08156 13.6055 6.22901 13.9333C6.55685 14.0972 6.39293 14.4251 6.22901 14.7529C5.24548 16.0643 6.06508 17.0478 6.88469 17.8674C7.7043 18.5231 7.7043 19.1788 7.86822 20.1623C7.86822 21.3098 8.03214 22.6211 8.5239 23.7686C4.42587 21.8015 1.63921 17.8674 1.63921 13.1137ZM13.1137 24.5882C11.9662 24.5882 10.6549 24.4243 9.67135 24.0964C9.50743 23.7686 9.50743 23.4407 9.67135 23.1129C10.327 21.8015 10.9827 20.6541 11.8023 19.5066C12.1302 19.1788 12.458 18.8509 12.458 18.3592C12.458 18.0313 12.6219 17.5396 12.7859 17.2117C13.2776 16.3921 13.1137 15.9004 12.458 15.7364C11.1466 15.4086 10.491 14.2611 9.50743 13.7694C8.5239 13.2776 7.54038 12.9498 6.72077 13.4415C6.39293 13.6055 5.90116 13.7694 5.90116 13.2776C5.90116 12.6219 5.08156 12.1302 5.24548 11.4745C5.08156 11.4745 4.91764 11.4745 4.75371 11.6384C4.58979 11.8023 4.42587 11.9662 4.09803 11.8023C3.77019 11.4745 3.93411 11.1466 3.93411 10.8188C4.09803 10.491 4.26195 10.327 4.58979 10.1631C5.24548 9.99919 5.90116 9.99919 6.22901 10.8188C6.72077 9.34351 7.7043 8.5239 8.68782 7.86822C8.68782 7.86822 9.99919 6.72077 10.1631 6.72077C10.327 6.72077 10.491 7.04861 10.8188 7.21253C11.1466 7.21253 11.3106 7.21253 11.3106 6.88469C11.4745 6.06508 10.9827 5.08156 10.327 4.91764C10.327 4.75371 10.491 4.75371 10.491 4.75371C10.9827 4.58979 11.6384 4.26195 11.4745 3.77019C11.4745 3.1145 10.8188 2.78666 10.1631 2.78666C9.83527 2.78666 9.50743 2.78666 9.17959 2.95058C8.5239 3.27842 7.7043 3.60627 6.72077 3.60627C8.5239 2.2949 10.8188 1.63921 13.1137 1.63921H14.4251C13.4415 1.80313 12.458 2.13098 11.8023 2.45882C12.7859 2.62274 12.9498 3.1145 12.6219 3.93411C12.458 4.26195 12.6219 4.58979 12.9498 4.75371C13.2776 4.91764 13.6055 4.91764 13.7694 4.58979C14.0972 4.09803 14.7529 3.93411 15.2447 3.77019C15.9004 3.60627 16.3921 3.27842 16.8839 2.62274C16.8839 2.45882 17.0478 2.45882 17.2117 2.2949C18.1953 2.62274 19.1788 3.27842 20.1623 3.93411C19.9984 3.93411 19.9984 4.09803 19.8345 4.09803C19.5066 4.42587 19.0149 4.58979 19.5066 5.24548C19.6705 5.57332 19.5066 5.73724 19.3427 5.90116C19.0149 6.06508 18.8509 5.90116 18.687 5.73724C18.5231 5.57332 18.5231 5.24548 18.0313 5.24548C17.8674 5.57332 17.3756 5.73724 17.3756 6.22901C18.1953 6.22901 18.0313 6.88469 18.1953 7.37645C17.2117 7.54038 16.8839 8.03214 17.3756 8.85175C17.5396 9.17959 17.2117 9.34351 17.0478 9.50743C16.3921 10.491 15.7364 11.1466 15.7364 12.2941C15.7364 13.4415 16.556 14.589 17.8674 14.4251C19.3427 14.2611 19.3427 14.2611 19.8345 15.5725C19.8345 15.7364 19.9984 15.9004 19.9984 16.0643C20.1623 16.3921 20.3262 16.72 20.1623 17.0478C19.6705 18.3592 20.3262 19.3427 20.818 20.3262C20.9819 20.6541 21.1458 20.818 21.3098 20.9819C19.1788 23.2768 16.3921 24.5882 13.1137 24.5882Z" fill="black"/>
+            </svg>
+
+
+            <p class="my-3 py-3">Ecosystem development and innovation programme support</p>
+          </div>
+        </div>
+        <div class="col  ">
+          <div class="mx-sm-auto" style="max-width: 336px;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d_309_20)">
+                <path d="M17.8637 5.12123C19.2377 5.12123 19.924 5.12123 20.3509 5.54816C20.7779 5.97508 20.7779 6.66136 20.7779 8.03539V19.692C20.7779 21.066 20.7779 21.7523 20.3509 22.1792C19.924 22.6062 19.2377 22.6062 17.8637 22.6062M17.8637 5.12123C16.4897 5.12123 15.8034 5.12123 15.3765 5.54816C14.9495 5.97508 14.9495 6.66136 14.9495 8.03539V19.692C14.9495 21.066 14.9495 21.7523 15.3765 22.1792C15.8034 22.6062 16.4897 22.6062 17.8637 22.6062M17.8637 5.12123V0.75M17.8637 22.6062V26.9774M28.0632 3.66415C29.4373 3.66415 30.1235 3.66416 30.5505 4.09108C30.9774 4.518 30.9774 5.20429 30.9774 6.57831V9.49246C30.9774 10.8665 30.9774 11.5528 30.5505 11.9797C30.1235 12.4066 29.4373 12.4066 28.0632 12.4066M28.0632 3.66415C26.6892 3.66415 26.0029 3.66416 25.576 4.09108C25.1491 4.518 25.1491 5.20429 25.1491 6.57831V9.49246C25.1491 10.8665 25.1491 11.5528 25.576 11.9797C26.0029 12.4066 26.6892 12.4066 28.0632 12.4066M28.0632 3.66415V0.75M28.0632 12.4066V15.3208M7.66415 10.9495C9.03818 10.9495 9.72446 10.9495 10.1514 11.3765C10.5783 11.8034 10.5783 12.4897 10.5783 13.8637V16.7779C10.5783 18.1519 10.5783 18.8382 10.1514 19.2651C9.72446 19.692 9.03818 19.692 7.66415 19.692M7.66415 10.9495C6.29013 10.9495 5.60385 10.9495 5.17692 11.3765C4.75 11.8034 4.75 12.4897 4.75 13.8637V16.7779C4.75 18.1519 4.75 18.8382 5.17692 19.2651C5.60385 19.692 6.29013 19.692 7.66415 19.692M7.66415 10.9495V8.03539M7.66415 19.692V22.6062" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+              </g>
+              <defs>
+                <filter id="filter0_d_309_20" x="0" y="0" width="35.7274" height="35.7275" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_309_20"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_309_20" result="shape"/>
+                </filter>
+              </defs>
+            </svg>
+
+
+            <p class="my-3 py-3">Programme delivery oversight, governance, and impact reporting</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="container">
+    <div class="text-center text-light    pt-2  mt-5  ">
+      <a [href]="'mailto:'+env.emailAddress" class="btn btn-secondary text-light" >Get in Touch</a>
+    </div>
+    <div class="mt-md-4 align-items-center text-secondary  justify-content-center text-center mb-4">
+      <div class=" ">
+        <p class="display-5   mb-sm-4">Let's Discuss Your Project</p>
+
+        <p class="fs-6 fs-md-5 text-center fs-lg-4 mb-3">
+          For inquires and collaborations, please reach out to us.
+        </p>
+        <p class="fs-6 fs-md-5 fs-lg-4 mb-3">
+          21 Forge, Abbey Road, Barking 1G11 7NH London, United Kingdoms <br> hello&#64;deenscorpai.com
+        </p>
+      </div>
+
+
+      <div class="secondary-body-custom bg-opcity-50 mt-5 rounded-0 border-dark py-2 p-sm-4">
+        <div class="d-flex flex-column flex-md-row align-items-md-start">
+
+          <!-- Image section - stays at top on md/sm -->
+          <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+            <img [attr.data-aos]="!isMobile ? 'flip-right' : null" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
+          </div>
+
+          <!-- Text section - becomes button-like on md/sm -->
+          <div class="col-12 col-md-10">
+
+            <!-- Button-like div for sm/md -->
+            <div class="d-block d-md-none w-100  p-3  rounded"
+                 style="background-color: #e9ecef; border: 1px solid #dee2e6; white-space: normal; word-wrap: break-word;">
+              DeenscorpAI delivers AI, data, and software projects for technology companies, enterprises, consulting firms, and funded programmes that outsource execution to accountable delivery partners.
+            </div>
+
+            <!-- Normal paragraph for lg and up -->
+            <p [attr.data-aos]="!isMobile ? 'fade-left' : null" class="d-none  mt-3 d-md-block m-0 p-0">
+              DeenscorpAI delivers AI, data, and software projects for technology companies, enterprises, consulting firms, and funded programmes that outsource execution to accountable delivery partners.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container py-5 position-relative" style="min-height: 120px;">
+    <div class="row g-0 h-100 align-items-stretch">
+
+      <!-- Left Text – always visible, no wrap -->
+      <div class="col-6 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center">
+        <p class="mb-0 small text-nowrap">
+          DeenscorpAI © 2026
+        </p>
+      </div>
+
+      <!-- Center Image – absolutely centered middle of section -->
+      <div class="col-6 col-sm-4 col-md-4 col-lg-4 position-relative d-flex justify-content-center align-items-center">
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <img
+            src="/to-up.png"
+            class="back-to-top-icon"
+            (click)="scrollToTop()"
+            alt="Back to top"
+            style="cursor: pointer; display: block;"
+          >
+        </div>
+      </div>
+
+      <!-- Right Text – always visible, no wrap, right aligned on md/lg -->
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-sm-end">
+        <p class="mb-0 small text-nowrap">
+          Powered by Deenscorp Royale UK
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>

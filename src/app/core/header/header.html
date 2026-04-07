@@ -1,0 +1,81 @@
+<header class="navbar navbar-expand-lg fixed-top bg-primary">
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="navbar-brand pe-sm-3">
+      <a class="nav-link p-0" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <img style="height: 2.8rem" src="/denscorp-logo.svg" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Desktop Get in Touch -->
+    <a
+      class="btn btn-secondary text-light btn-sm fs-sm order-lg-3 d-none d-lg-inline-flex"
+      href="javascript:void(0)"
+      (click)="openEmail()"
+    >
+      Get in Touch
+    </a>
+
+    <!-- Mobile Toggler -->
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav text-center ms-auto me-auto">
+
+        <li class="nav-item">
+          <a
+            class="nav-link text-secondary"
+            href="javascript:void(0)"
+            (click)="scrollToSection('services')"
+          >
+            Services
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link text-secondary"
+            href="javascript:void(0)"
+            (click)="scrollToSection('delivery-model')"
+          >
+            Delivery Model
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link text-secondary"
+            href="javascript:void(0)"
+            (click)="scrollToSection('eco-system')"
+          >
+            Eco System
+          </a>
+        </li>
+
+        <!-- Mobile Get in Touch -->
+        <li class="nav-item d-lg-none mt-3">
+          <a
+            class="btn btn-secondary text-light w-100"
+            href="javascript:void(0)"
+            (click)="openEmail()"
+          >
+            Get in Touch
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
