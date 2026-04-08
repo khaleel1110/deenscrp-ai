@@ -16,11 +16,15 @@ export class App implements AfterViewInit {
       duration: 1000,
       once: false,
       easing: 'ease-in-out',
-      mirror: true
+      mirror: true,
+      offset: 50,
+      throttleDelay: 99,
+      debounceDelay: 50,
+      disable: false,
     });
 
     setTimeout(() => {
-      AOS.refreshHard();
-    }, 300);
+      AOS.refresh();
+    }, 100);
   }
 }

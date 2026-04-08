@@ -18,18 +18,18 @@
 
     <!-- Content - Center on mobile, Bottom on desktop -->
     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column px-3 px-lg-4"
-         [style.justifyContent]="isMobile ? 'flex-end' : 'flex-end'"
-         [style.paddingBottom]="isMobile ? '5rem' : '3rem'">
+         [style.justifyContent]="shouldEnableAOS() ? 'flex-end' : 'flex-end'"
+         [style.paddingBottom]="shouldEnableAOS() ? '5rem' : '3rem'">
 
       <div class="w-100 text-center text-dark mx-auto" style="max-width: 800px;">
 
         <h2 class="h2 fw-bold mb-2 mb-md-3"
-            [style.fontSize]="isMobile ? '1.5rem' : '2rem'">
+            [style.fontSize]="shouldEnableAOS() ? '1.5rem' : '2rem'">
           YOU CREATE THE BUSINESS, WE PUT IT IN ORDER
         </h2>
 
         <p class="fs-6 fs-md-5 fs-lg-4 mb-3"
-           [style.fontSize]="isMobile ? '0.9rem' : '1rem'">
+           [style.fontSize]="shouldEnableAOS() ? '0.9rem' : '1rem'">
           We are UK-led AI and technology delivery firm connecting organisations with vetted global experts to execute high-impact digital, data, and AI projects—reliably, securely, and at speed.
         </p>
 
@@ -51,7 +51,7 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-3 pb-md-4 pb-xl-5">
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-right' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">AI & Data Solutions </h3>
@@ -60,7 +60,7 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-down' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Digital Transformation </h3>
@@ -69,7 +69,7 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-left' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
         <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Quality Assurance & Testing </h3>
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-right' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
         <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Managed Global Teams </h3>
@@ -89,7 +89,7 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-up' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
         <a class="card card-hover-secondary rounded-1   bg-primary border-1 border-white h-100  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Software Engineering </h3>
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-left' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Consulting & Delivery Oversight </h3>
@@ -116,16 +116,16 @@
     <div class="  mt-md-4">
       <div class=" col-lg-8 col-md-12 offset-xxl-1    mb-4 mb-md-0">
         <div class="text-center text-md-start pe-md-4 pe-xl-5 pe-xxl-0">
-          <p [attr.data-aos]="!isMobile ? 'fade-right' : null" class="display-6 text-secondary mb-sm-4">Why Deenscorp.ai Powers End-to-End Technology Delivery Across Global Teams</p>
+          <p [attr.data-aos]="shouldEnableAOS() ? 'fade-right' : null" class="display-6 text-secondary mb-sm-4">Why Deenscorp.ai Powers End-to-End Technology Delivery Across Global Teams</p>
           <p class="   ">delivers enterprise-led technology projects by combining global expertise, structured governance, and accountable delivery across diverse markets and ecosystems.</p>
 
         </div>
       </div>
     </div>
 
-    <div [attr.data-aos]="!isMobile ? 'fade-down' : null"
-         [attr.data-aos-easing]="!isMobile ? 'linear' : null"
-         [attr.data-aos-duration]="!isMobile ? '1500' : null" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
+    <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null"
+         [attr.data-aos-easing]="shouldEnableAOS() ? 'linear' : null"
+         [attr.data-aos-duration]="shouldEnableAOS() ? '1500' : null" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
 
 
 
@@ -203,19 +203,17 @@
       </div>
 
       <!--  GRID -->
+      <!-- GRID -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-2 py-4">
-        @for (item of workCategories ; track item) {
-          <div    [attr.data-aos]="!isMobile ? item.aos : null"
-                  [attr.data-aos-delay]="!isMobile ? item.delay : null" class="col">
+        @for (item of workCategories; track item) {
+          <div [attr.data-aos]="shouldEnableAOS() ? item.aos : null"
+               [attr.data-aos-delay]="shouldEnableAOS() ? item.delay : null"
+               class="col">
             <div class="badge bg-secondary rounded-1 text-light fs-6 px-4 py-2 w-100 text-center">
               {{ item.title }}
             </div>
           </div>
         }
-
-
-
-
       </div>
 
     </section>
@@ -239,7 +237,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-down-right' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">1</div>
@@ -257,7 +255,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'zoom-out-down' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">2</div>
@@ -275,7 +273,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-down-left' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">3</div>
@@ -293,7 +291,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-up-right' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-up' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">4</div>
@@ -311,7 +309,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'zoom-out-up' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-up' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">5</div>
@@ -326,7 +324,7 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="!isMobile ? 'fade-up-left' : null" class="col">
+      <div [attr.data-aos]="shouldEnableAOS()? 'zoom-out-up' : null" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">6</div>
@@ -361,7 +359,7 @@
         technology adoption, and inclusive innovation.
       </p>
     </div>
-    <div [attr.data-aos]="!isMobile ? 'zoom-out-down' : null"  class=" secondary-body-custom bg-opcity-50  rounded-0 border-dark py-5 px-4 p-sm-5">
+    <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null"  class=" secondary-body-custom bg-opcity-50  rounded-0 border-dark py-5 px-4 p-sm-5">
 
 
       <div class="  row row-cols-1 row-cols-sm-3 pt-2 pt-sm-0 pt-lg-3">
@@ -470,7 +468,7 @@
 
           <!-- Image section - stays at top on md/sm -->
           <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-            <img [attr.data-aos]="!isMobile ? 'flip-right' : null" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
+            <img [attr.data-aos]="shouldEnableAOS() ? 'flip-right' : null" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
           </div>
 
           <!-- Text section - becomes button-like on md/sm -->
@@ -483,7 +481,7 @@
             </div>
 
             <!-- Normal paragraph for lg and up -->
-            <p [attr.data-aos]="!isMobile ? 'fade-left' : null" class="d-none  mt-3 d-md-block m-0 p-0">
+            <p [attr.data-aos]="shouldEnableAOS() ? 'fade-left' : null" class="d-none  mt-3 d-md-block m-0 p-0">
               DeenscorpAI delivers AI, data, and software projects for technology companies, enterprises, consulting firms, and funded programmes that outsource execution to accountable delivery partners.
             </p>
 

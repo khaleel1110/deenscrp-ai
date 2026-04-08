@@ -11,8 +11,7 @@
     <!-- Desktop Get in Touch -->
     <a
       class="btn btn-secondary text-light btn-sm fs-sm order-lg-3 d-none d-lg-inline-flex"
-      href="javascript:void(0)"
-      (click)="openEmail()"
+      [href]="'mailto:' + emailAddress"
     >
       Get in Touch
     </a>

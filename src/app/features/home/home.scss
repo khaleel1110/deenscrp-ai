@@ -7,23 +7,61 @@
     height: 760px;
   }
 }
+
 .hero-section::after {
   content: "";
   position: absolute;
   inset: 0;
-
 }
+
 .badge {
   display: block;
 }
+
 .custom-corner {
   height: 40px;
   width: 40px;
   border-top-left-radius: 10px;
-}.border-secondary-body {
-border-block-color: #c5c5c5;
-   border-color: #c5c5c5;
 }
+
+.border-secondary-body {
+  border-block-color: #c5c5c5;
+  border-color: #c5c5c5;
+}
+
 .secondary-body-custom {
-background-color: #ececec;
+  background-color: #ececec;
+}
+
+// Fix for AOS on all screen sizes
+[data-aos] {
+  pointer-events: none;
+
+  &.aos-animate {
+    pointer-events: auto;
+  }
+}
+
+// Ensure smooth scrolling on all devices
+html {
+  scroll-behavior: smooth;
+}
+
+// Responsive AOS adjustments for better performance
+@media (min-width: 992px) {
+  [data-aos] {
+    transition-duration: 0.8s !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  [data-aos] {
+    transition-duration: 0.6s !important;
+  }
+}
+
+@media (max-width: 767px) {
+  [data-aos] {
+    transition-duration: 0.4s !important;
+  }
 }

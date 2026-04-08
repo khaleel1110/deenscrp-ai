@@ -17,63 +17,35 @@ export interface WorkCategory {
 export class Home implements OnInit {
   env = environment;
   isMobile = false;
+  isTablet = false;
+  isDesktop = false;
 
   workCategories: WorkCategory[] = [
-    { title: 'Large Enterprises', aos: 'fade-right', delay: 100 },
-    { title: 'Technology Platforms', aos: 'fade-right', delay: 50 },
+    { title: 'Large Enterprises', aos: 'fade-down', delay: 100 },
+    { title: 'Technology Platforms', aos: 'fade-down', delay: 50 },
     { title: 'Public Organisations', aos: '', delay: 200 },
-    { title: 'Universities', aos: 'fade-left', delay: 50 },
-    { title: 'Innovation Hubs', aos: 'fade-left', delay: 100 },
+    { title: 'Universities', aos: 'fade-up', delay: 50 },
+    { title: 'Innovation Hubs', aos: 'fade-up', delay: 100 },
   ];
 
   ngOnInit(): void {
     this.checkScreenSize();
-    this.updateWorkCategoriesForScreen();
   }
 
   @HostListener('window:resize')
   onResize(): void {
     this.checkScreenSize();
-    this.updateWorkCategoriesForScreen();
   }
 
   checkScreenSize(): void {
-    this.isMobile = window.innerWidth < 768; // Mobile devices under 768px
+    this.isMobile = window.innerWidth < 768;      // sm and below
+    this.isTablet = window.innerWidth >= 768 && window.innerWidth < 1024; // md
+    this.isDesktop = window.innerWidth >= 1024;    // lg and above
   }
 
-  updateWorkCategoriesForScreen(): void {
-    this.workCategories = [
-      {
-        title: 'Large Enterprises',
-        aos: this.isMobile ? undefined : 'fade-right',
-        delay: this.isMobile ? undefined : 100,
-      },
-      {
-        title: 'Technology Platforms',
-        aos: this.isMobile ? undefined : 'fade-right',
-        delay: this.isMobile ? undefined : 50,
-      },
-      {
-        title: 'Public Organisations',
-        aos: this.isMobile ? undefined : '',
-        delay: this.isMobile ? undefined : 200,
-      },
-      {
-        title: 'Universities',
-        aos: this.isMobile ? undefined : 'fade-left',
-        delay: this.isMobile ? undefined : 50,
-      },
-      {
-        title: 'Innovation Hubs',
-        aos: this.isMobile ? undefined : 'fade-left',
-        delay: this.isMobile ? undefined : 100,
-      },
-    ];
-  }
-
-  // Helper method to conditionally add AOS attributes
-  shouldAnimate(): boolean {
-    return !this.isMobile;
+  // Enable AOS only on desktop (lg and above)
+  shouldEnableAOS(): boolean {
+    return this.isDesktop;
   }
 
   scrollToTop(): void {
