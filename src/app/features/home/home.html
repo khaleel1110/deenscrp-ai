@@ -1,4 +1,4 @@
-<main class="page-wrapper bg-primary">
+<main style="overflow: hidden"  class="page-wrapper bg-primary">
 
   <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
 
@@ -6,7 +6,7 @@
 
 
   <!-- Background Image -->
-  <section class="hero-section position-relative mb-5">
+  <section style="overflow: hidden"  class="hero-section position-relative mb-5">
 
     <!-- Background Image -->
     <img src="/hero-1.png"
@@ -40,7 +40,7 @@
   </section>
 
   <!-- Breadcrumb + Services grid -->
-  <section id="services" class=" container  py-3 mb-md-3 mb-lg-4 mb-xxl-5">
+  <section style="overflow: hidden"  id="services" class=" container  py-3 mb-md-3 mb-lg-4 mb-xxl-5">
 
     <div class="text-center text-light  pb-1 pb-sm-2 pb-md-4 pt-lg-2 mt-0  mt-lg-0">
       <a [href]="'mailto:'+env.emailAddress"  class="btn btn-secondary text-light" >Get in Touch</a>
@@ -51,7 +51,10 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-3 pb-md-4 pb-xl-5">
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
+      <div data-aos="fade-right"
+           data-aos-offset="300"
+           data-aos-easing="ease-in-sine"
+           class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">AI & Data Solutions </h3>
@@ -60,7 +63,9 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
+      <div data-aos="fade-down"
+           data-aos-easing="linear"
+           data-aos-duration="1500" class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Digital Transformation </h3>
@@ -69,7 +74,9 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null" class="col">
+      <div data-aos="fade-left"
+           data-aos-offset="500"
+           data-aos-duration="500" class="col">
         <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Quality Assurance & Testing </h3>
@@ -79,7 +86,9 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
+      <div data-aos="fade-right"
+           data-aos-offset="300"
+           data-aos-easing="ease-in-sine" class="col">
         <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Managed Global Teams </h3>
@@ -89,7 +98,8 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
+      <div  data-aos="fade-up"
+            data-aos-duration="3000" class="col">
         <a class="card card-hover-secondary rounded-1   bg-primary border-1 border-white h-100  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Software Engineering </h3>
@@ -99,7 +109,9 @@
       </div>
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null" class="col">
+      <div data-aos="fade-left"
+           data-aos-offset="500"
+           data-aos-duration="500" class="col">
         <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
           <div class="card-body pb-0">
             <h3 class="h4 card-title mt-0">Consulting & Delivery Oversight </h3>
@@ -116,23 +128,21 @@
     <div class="  mt-md-4">
       <div class=" col-lg-8 col-md-12 offset-xxl-1    mb-4 mb-md-0">
         <div class="text-center text-md-start pe-md-4 pe-xl-5 pe-xxl-0">
-          <p [attr.data-aos]="shouldEnableAOS() ? 'fade-right' : null" class="display-6 text-secondary mb-sm-4">Why Deenscorp.ai Powers End-to-End Technology Delivery Across Global Teams</p>
+          <p data-aos="fade-right"  class="display-6 text-secondary mb-sm-4">Why Deenscorp.ai Powers End-to-End Technology Delivery Across Global Teams</p>
           <p class="   ">delivers enterprise-led technology projects by combining global expertise, structured governance, and accountable delivery across diverse markets and ecosystems.</p>
 
         </div>
       </div>
     </div>
 
-    <div [attr.data-aos]="shouldEnableAOS() ? 'fade-down' : null"
-         [attr.data-aos-easing]="shouldEnableAOS() ? 'linear' : null"
-         [attr.data-aos-duration]="shouldEnableAOS() ? '1500' : null" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
+    <div  class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
 
 
 
 
       <!-- Item -->
-      <div class="col">
-        <a class="card  bg-primary border-1 border-white rounded-0 pb-5 h-100 text-decoration-none" >
+      <div data-aos="fade-down" data-aos-delay="0"  class="col">
+        <a class="card  bg-primary border-1 border-white rounded-0  pb-5 h-100 text-decoration-none" >
           <div class="card-body pb-0">
 
             <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,8 +155,8 @@
         </a>
       </div>
       <!-- Item -->
-      <div class="col">
-        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
+      <div data-aos="fade-down" data-aos-delay="150" class="col">
+        <a class="card  bg-primary border-1 border-white py-sm-4 rounded-0 h-100 text-decoration-none" >
           <div class="card-body pb-0">
 
             <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,9 +171,9 @@
         </a>
       </div>
       <!-- Item -->
-      <div class="col">
-        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
-          <div class="card-body pb-0">
+      <div data-aos="fade-down" data-aos-delay="300" class="col ">
+        <a class="card  bg-primary border-1 border-white  rounded-0 h-100 text-decoration-none" >
+          <div class="card-body  pb-0">
 
             <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
@@ -175,7 +185,7 @@
         </a>
       </div>
       <!-- Item -->
-      <div class="col">
+      <div data-aos="fade-down" data-aos-delay="450" class="col">
         <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
           <div class="card-body pb-0">
 
@@ -237,7 +247,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
+      <div data-aos="zoom-in-right" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">1</div>
@@ -255,7 +265,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
+      <div data-aos="zoom-in-down" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">2</div>
@@ -273,7 +283,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-down' : null" class="col">
+      <div data-aos="zoom-in-left" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">3</div>
@@ -291,7 +301,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-up' : null" class="col">
+      <div data-aos="zoom-in-right" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">4</div>
@@ -309,7 +319,7 @@
 
 
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS() ? 'zoom-out-up' : null" class="col">
+      <div data-aos="zoom-in-up" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">5</div>
@@ -324,7 +334,7 @@
         </a>
       </div>
       <!-- Item -->
-      <div [attr.data-aos]="shouldEnableAOS()? 'zoom-out-up' : null" class="col">
+      <div data-aos="zoom-in-left" class="col">
         <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
           <div class="d-flex justify-content-start align-items-start">
             <div class="bg-dark custom-corner text-center text-white h4 ">6</div>
@@ -350,7 +360,7 @@
 
 
 
-  <section id="eco-system" class="container">
+  <section style="overflow: hidden" id="eco-system" class="container">
     <div class="mt-md-4 text-center mb-4">
       <p class="display-5 text-dark mb-sm-4">Global Ecosystem & Public Interest</p>
 
@@ -359,7 +369,9 @@
         technology adoption, and inclusive innovation.
       </p>
     </div>
-    <div [attr.data-aos]="shouldEnableAOS() ? 'fade-up' : null"  class=" secondary-body-custom bg-opcity-50  rounded-0 border-dark py-5 px-4 p-sm-5">
+    <div  data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"  class=" secondary-body-custom bg-opcity-50  rounded-0 border-dark py-5 px-4 p-sm-5">
 
 
       <div class="  row row-cols-1 row-cols-sm-3 pt-2 pt-sm-0 pt-lg-3">
@@ -446,7 +458,7 @@
   </section>
 
 
-  <section class="container">
+  <section style="overflow: hidden"  class="container">
     <div class="text-center text-light    pt-2  mt-5  ">
       <a [href]="'mailto:'+env.emailAddress" class="btn btn-secondary text-light" >Get in Touch</a>
     </div>
@@ -468,7 +480,7 @@
 
           <!-- Image section - stays at top on md/sm -->
           <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-            <img [attr.data-aos]="shouldEnableAOS() ? 'flip-right' : null" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
+            <img data-aos="flip-left" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
           </div>
 
           <!-- Text section - becomes button-like on md/sm -->
@@ -481,7 +493,7 @@
             </div>
 
             <!-- Normal paragraph for lg and up -->
-            <p [attr.data-aos]="shouldEnableAOS() ? 'fade-left' : null" class="d-none  mt-3 d-md-block m-0 p-0">
+            <p data-aos="fade-left" class="d-none  mt-3 d-md-block m-0 p-0">
               DeenscorpAI delivers AI, data, and software projects for technology companies, enterprises, consulting firms, and funded programmes that outsource execution to accountable delivery partners.
             </p>
 
@@ -491,7 +503,7 @@
       </div>
     </div>
   </section>
-  <section class="container py-5 position-relative" style="min-height: 120px;">
+  <section style="overflow: hidden"  class="container py-5 position-relative" style="min-height: 120px;">
     <div class="row g-0 h-100 align-items-stretch">
 
       <!-- Left Text – always visible, no wrap -->
