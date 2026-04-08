@@ -44,6 +44,7 @@ export class Home implements OnInit {
   }
 
   // Enable AOS only on desktop (lg and above)
+
   shouldEnableAOS(): boolean {
     return this.isDesktop;
   }
