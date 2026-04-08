@@ -30,14 +30,8 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "node_modules/aos/dist/aos.css",
-              "src/scss/theme.scss",
-              "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
+            "styles": ["node_modules/aos/dist/aos.css", "src/scss/theme.scss", "src/styles.scss"],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
 
             "polyfills": ["@angular/localize/init"]
           },
@@ -85,6 +79,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
