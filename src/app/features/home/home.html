@@ -48,84 +48,28 @@
     <!-- Page title -->
     <h1 class="display-5 text-center">Our services</h1>
     <!-- Services grid -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-3 pb-md-4 pb-xl-5">
-
-      <!-- Item -->
-      <div data-aos="fade-right" data-aos-delay="0"
-           data-aos-offset="300"
-           data-aos-easing="ease-in-sine"
-           class="col">
-        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">AI & Data Solutions </h3>
-            <p class="card-text mt-3 pt-4">We design and deploy AI, machine learning, and data solutions that automate processes, improve decision-making, and deliver measurable business value through secure, scalable, enterprise-ready architectures.</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="fade-down"
-           data-aos-delay="150"
-           data-aos-easing="linear"
-           data-aos-duration="500" class="col">
-        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">Digital Transformation </h3>
-            <p class="card-text mt-3 pt-4">We help organisations modernise systems and processes through technology-led transformation, improving efficiency, agility, and service delivery aligned with strategic business objectives.</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="fade-left"
-           data-aos-delay="300"
-           data-aos-offset="500"
-           data-aos-duration="500" class="col">
-        <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">Quality Assurance & Testing </h3>
-            <p class="card-text mt-3 pt-4">We deliver comprehensive testing services covering functionality, performance, security, and compliance, ensuring digital products meet enterprise standards before deployment.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div data-aos="fade-right"
-           data-aos-delay="450"
-           data-aos-offset="300"
-           data-aos-easing="ease-in-sine" class="col">
-        <a class="card card-hover-secondary rounded-1 h-100  bg-primary border-1 border-white  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">Managed Global Teams </h3>
-            <p class="card-text mt-3 pt-4">We build secure, scalable software across web, mobile, and cloud platforms, delivering robust systems designed for performance, integration, and long-term operational reliability.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div  data-aos="fade-up"
-            data-aos-duration="500"
-            data-aos-delay="600"class="col">
-        <a class="card card-hover-secondary rounded-1   bg-primary border-1 border-white h-100  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">Software Engineering </h3>
-            <p class="card-text mt-3 pt-4">We build secure, scalable software across web, mobile, and cloud platforms, delivering robust systems designed for performance, integration, and long-term operational reliability.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div data-aos="fade-left"
-           data-aos-offset="300"
-           data-aos-delay="300"
-           data-aos-duration="500" class="col">
-        <a class="card card-hover-secondary rounded-1 pb-5  bg-primary border-1 border-white  text-decoration-none" >
-          <div class="card-body pb-0">
-            <h3 class="h4 card-title mt-0">Consulting & Delivery Oversight </h3>
-            <p class="card-text mt-3 pt-4">We provide strategic consulting and delivery governance, supporting project planning, execution, risk management, and performance monitoring to ensure successful, outcome-focused delivery.</p>
-          </div>
-        </a>
-      </div>
 
 
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-4    ">
+
+      @for (item of SERVICE_CARDS; track item ){
+        <div
+
+          class="col"
+          [attr.data-aos]="item.animation"
+          [attr.data-aos-delay]="item.delay"
+          [attr.data-aos-offset]="item.offset"
+          [attr.data-aos-duration]="item.duration"
+          [attr.data-aos-easing]="item.easing"
+        >
+          <a class="card card-hover-secondary rounded-1 bg-primary border-1 border-white h-100 text-decoration-none">
+            <div class="card-body pb-sm-4 pb-3 pb-md-2 pb-xl-2">
+              <h3 class="h4 card-title mt-0">{{ item.title }}</h3>
+              <p class="card-text mt-3 pt-4">{{ item.description }}</p>
+            </div>
+          </a>
+        </div>
+      }
 
     </div>
 
@@ -140,72 +84,31 @@
       </div>
     </div>
 
-    <div  class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
 
+      @for ( item of FEATURE_CARDS; track  item){
+        <div
+          class="col"
+          data-aos="fade-down"
+          [attr.data-aos-delay]="item.delay"
+        >
+          <a class="card bg-primary border-1 border-white rounded-0 h-100 text-decoration-none">
+            <div class="card-body pb-md-4 pb-3">
 
+              <svg width="25" height="30" viewBox="0 0 30 37" fill="none">
+                <path [attr.d]="item.svgPath" fill="black"></path>
+              </svg>
 
+              <h6 class="mt-2 py-3">{{ item.title }}</h6>
+              <p class="card-text">{{ item.description }}</p>
 
-      <!-- Item -->
-      <div data-aos="fade-down" data-aos-delay="0"  class="col">
-        <a class="card  bg-primary border-1 border-white rounded-0  pb-5 h-100 text-decoration-none" >
-          <div class="card-body pb-0">
-
-            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
-            </svg>
-
-            <h6 class=" mt-2  py-3 ">Structured Engagements</h6>
-            <p class="card-text">Clear discovery, defined scope, coordinated team assembly, delivery oversight, and reporting ensure predictable outcomes.</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="fade-down" data-aos-delay="150" class="col">
-        <a class="card  bg-primary border-1 border-white py-sm-4 rounded-0 h-100 text-decoration-none" >
-          <div class="card-body pb-0">
-
-            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
-            </svg>
-
-            <h6 class=" mt-2  py-3 ">Secure & Compliant
-              Delivery</h6>
-            <p class="card-text">All engagements follow GDPR-aligned processes, secure delivery practices,
-              and contract-led frameworks..</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="fade-down" data-aos-delay="300" class="col ">
-        <a class="card  bg-primary border-1 border-white  rounded-0 h-100 text-decoration-none" >
-          <div class="card-body  pb-0">
-
-            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
-            </svg>
-
-            <h6 class=" mt-2  py-3 ">Partner-Based Model</h6>
-            <p class="card-text">We work with vetted global experts, academic partners, and innovation ecosystems under a structured delivery model.</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="fade-down" data-aos-delay="450" class="col">
-        <a class="card  bg-primary border-1 border-white rounded-0 h-100 text-decoration-none" >
-          <div class="card-body pb-0">
-
-            <svg width="25" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6667 26.9091L5 20.1818L7.35 17.8105L11.6667 22.1495L22.65 11.0664L25 13.4545M15 0L0 6.72727V16.8182C0 26.1523 6.4 34.8809 15 37C23.6 34.8809 30 26.1523 30 16.8182V6.72727L15 0Z" fill="black"/>
-            </svg>
-
-            <h6 class=" mt-2  py-3 ">Scalable Global Reach</h6>
-            <p class="card-text">Multi-region delivery capability supported by managed teams and local partners.</p>
-          </div>
-        </a>
-      </div>
-
+            </div>
+          </a>
+        </div>
+      }
 
     </div>
+
     <section class="container    ">
 
       <div class="mt-md-4 text-center mb-4">
@@ -221,8 +124,12 @@
       <!-- GRID -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-2 py-4">
         @for (item of workCategories; track item) {
-          <div [attr.data-aos]="shouldEnableAOS() ? item.aos : null"
-               [attr.data-aos-delay]="shouldEnableAOS() ? item.delay : null"
+
+
+          <div
+
+            [attr.data-aos]="item.aos"
+               [attr.data-aos-delay]=" item.delay "
                class="col">
             <div class="badge bg-secondary rounded-1 text-light fs-6 px-4 py-2 w-100 text-center">
               {{ item.title }}
@@ -230,6 +137,7 @@
           </div>
         }
       </div>
+
 
     </section>
 
@@ -244,120 +152,33 @@
 
     </p>
 
-
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 py-4 pb-sm-3 pb-md-4 pb-xl-5">
 
+      @for ( item of PROCESS_STEPS; track item){
+        <div
 
+          class="col"
+          [attr.data-aos]="item.animation"
+        >
+          <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none">
 
+            <div class="d-flex justify-content-start align-items-start">
+              <div class="bg-dark custom-corner text-center text-white h4">
+                {{ item.step }}
+              </div>
+            </div>
 
+            <div class="mx-4 mt-3 pb-3">
+              <p class="h6 mt-0 py-1 pb-2">{{ item.title }}</p>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
 
-      <!-- Item -->
-      <div data-aos="zoom-in-right" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">1</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Discovery & Alignment</p>
-            <p class="card-text">Clarify project objectives align stakeholders and define success criteria before delivery begins.</p>
-          </div>
-        </a>
-      </div>
-
-
-
-      <!-- Item -->
-      <div data-aos="zoom-in-down" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">2</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Scope Definition & Planning</p>
-            <p class="card-text">Define project scope deliverables timelines governance and milestones to ensure controlled execution.</p>
-          </div>
-        </a>
-      </div>
-
-
-
-      <!-- Item -->
-      <div data-aos="zoom-in-left" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">3</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Team Assemblyt</p>
-            <p class="card-text">Assemble vetted experts and partners aligned to project requirements delivery objectives and timelines.</p>
-          </div>
-        </a>
-      </div>
-
-
-
-      <!-- Item -->
-      <div data-aos="zoom-in-right" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">4</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Execution & Delivery</p>
-            <p class="card-text">Deliver work against agreed milestones with structured coordination quality control and active oversight.</p>
-          </div>
-        </a>
-      </div>
-
-
-
-      <!-- Item -->
-      <div data-aos="zoom-in-up" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">5</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Review & Optimisation</p>
-            <p class="card-text">Review deliverables refine outputs and ensure quality performance and stakeholder alignment.</p>
-          </div>
-        </a>
-      </div>
-      <!-- Item -->
-      <div data-aos="zoom-in-left" class="col">
-        <a class="card pb-4 bg-primary border-2 border-secondary-body rounded-1 h-100 text-decoration-none" >
-          <div class="d-flex justify-content-start align-items-start">
-            <div class="bg-dark custom-corner text-center text-white h4 ">6</div>
-          </div>
-
-          <div class="mx-4 mt-3  pb-3">
-
-
-            <p class=" h6 mt-0  py-1 pb-2 ">Reporting & Close-Out</p>
-            <p class="card-text">We provide structured reporting knowledge transfer and formal close-out aligned with contractual obligations.</p>
-          </div>
-        </a>
-      </div>
-
-
-
+          </a>
+        </div>
+      }
 
     </div>
+
     <p class="card-text mt-0 text-center">Our model allows flexibility, scalability, and consistent delivery quality across regions and sectors.</p>
 
   </section>
@@ -485,7 +306,7 @@
 
           <!-- Image section - stays at top on md/sm -->
           <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-            <img data-aos="flip-left" style="height: 5.8rem" src="/D-logo.png" alt="Logo">
+            <img data-aos="flip-left" style="height: 5.8rem" src="/D-2.svg" alt="Logo">
           </div>
 
           <!-- Text section - becomes button-like on md/sm -->
